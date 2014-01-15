@@ -1,0 +1,32 @@
+{
+  "name": "lanote_rest",
+  "description": "(pending)",
+  "version": "0.0.1",
+  "main": "./lanote_rest.js",
+  "author": {
+    "name": "MrUnkn0wn",
+    "email": "mr.unkn0wn@aol.com"
+  },
+  "keywords": [],
+  "licenses": {
+    "type": "mit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mrUnkn0wn/lanote_rest.git"
+  },
+  "bugs": {
+    "web": "http://github.com/mrUnkn0wn/lanote_rest/issues"
+  },
+  "dependencies": {
+    "express": "~3.4.7",
+    "winston": "~0.7.2",
+    "nconf": "~0.6.9",
+    "Faker": "~0.5.11",
+    "oauth2orize": "~1.0.0",
+    "passport": "~0.1.17",
+    "passport-http": "~0.2.2",
+    "passport-http-bearer": "~1.0.1",
+    "passport-oauth2-client-password": "~0.1.1"
+  }
+}
