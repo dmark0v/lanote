@@ -12,8 +12,9 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/main_new.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
         
         <style>
@@ -29,10 +30,10 @@
 
         <!-- Add your site or application content here -->
         <div id="header"  class='clearfix'>
-            <div class="header-logo">la</div>
+            <!--div class="header-logo">la</div>
             <div class="header-separator"></div>
             <div class="header-main">note</div>
-            <div class="header-signup"><a>Войти</a><span></span><a>Зарегистрироваться</a></div>
+            <div class="header-signup"><a>Войти</a><span></span><a>Зарегистрироваться</a></div-->
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -42,10 +43,10 @@
         <script src="js/vendor/underscore.js"></script>
         <script src="js/vendor/json2.js"></script>
         <script src="js/vendor/backbone.js"></script>
-        <script src="js/vendor/backbone-marionette.min.js"></script>
+        <script src="js/vendor/backbone.marionette.min.js"></script>
         
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="app/app.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -56,5 +57,8 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
+        <script>
+            lanote.start();
+        </script>    
     </body>
 </html>

@@ -98,7 +98,7 @@ textarea {
    ========================================================================== */
 
 
-body{
+/*body{
     background-color: #FCFAEE;
 }
 .header{
@@ -113,7 +113,6 @@ body{
 
 .header-logo{
     font-size: 60px;
-    /*font-family: 'Arian AMU';*/
     text-align: right;
     vertical-align: central;
     font-weight: bold;
@@ -129,8 +128,6 @@ body{
 }
 
 .header-main{
-    
-    /*font-family: 'Arian AMU';*/
     padding-left: 5px;
     padding-top: 10px;
     font-size: 60px;
@@ -146,7 +143,7 @@ body{
     font-size: 14px;
     width:203px;
     background-color:#AACCB1;
-}
+}*/
 
 
 

@@ -11,16 +11,16 @@ body {
   background-color: #FCFAEE;
 }
 
-.header {
+#header {
   height: 50px;
 }
-.header div {
+#header div {
   float: left;
   height: 60px;
   padding-top: 8px;
   font-family: "Aliquam";
 }
-.header .header-logo {
+#header .header-logo {
   font-size: 40px;
   text-align: right;
   vertical-align: central;
@@ -30,11 +30,11 @@ body {
   background-color: #AACCB1;
   padding-right: 5px;
 }
-.header .header-separator {
+#header .header-separator {
   width: 5px;
   background-color: #68B3AF;
 }
-.header .header-main {
+#header .header-main {
   padding-left: 5px;
   padding-top: 10px;
   font-size: 40px;
@@ -45,7 +45,7 @@ body {
   background-color: #D3E2B6;
   color: #497D7A;
 }
-.header .header-signup {
+#header .header-signup {
   font-size: 14px;
   width: 203px;
   background-color: #AACCB1;
