@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10.09.2014, 20:31:39
+    Author     : MrUnkn0wn
+*/
+
+$font-header: 'Aliquam';
+$font-main: Helvetica, sans-serif;
+$colors-light-0:#FCFAEE;
+$colors-light-1:#F8F4D7;
+$colors-middle-0:#D3E2B6;
+$colors-dark-0:#AACCB1;
+$colors-dark-1:#68B3AF;
+$colors-dark-2:#497D7A;
+
+body {
+    background-color: $colors-light-0;
+}
+
+.header {
+    height:50px;
+    div{
+        float:left;
+        height:60px;
+        padding-top: 8px;
+        font-family: $font-header;
+    }
+    .header-logo{
+        font-size: 40px;
+        text-align: right;
+        vertical-align: central;
+        font-weight: bold;
+        width:204px;
+        color:$colors-light-1;
+        background-color:$colors-dark-0;
+        padding-right: 5px;
+    }
+    .header-separator{
+        width:5px;
+        background-color: $colors-dark-1;
+    }
+    .header-main{
+        padding-left: 5px;
+        padding-top: 10px;
+        font-size: 40px;
+        vertical-align: central;
+        font-weight: bold;
+        width: 78%;
+        overflow:hidden;
+        background-color:$colors-middle-0;
+        color:$colors-dark-2;
+    }
+    .header-signup{
+        font-size: 14px;
+        width:203px;
+        background-color:$colors-dark-0;
+    }
+}
