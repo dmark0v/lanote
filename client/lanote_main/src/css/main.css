@@ -102,17 +102,17 @@ body{
     background-color: #FCFAEE;
 }
 .header{
-    height:50px;
+    height:80px;
 }
 .header>div{
     float:left;
-    height:60px;
+    height:100px;
     padding-top: 8px;
     font-family: 'Aliquam';
 }
 
 .header-logo{
-    font-size: 40px;
+    font-size: 60px;
     /*font-family: 'Arian AMU';*/
     text-align: right;
     vertical-align: central;
@@ -133,7 +133,7 @@ body{
     /*font-family: 'Arian AMU';*/
     padding-left: 5px;
     padding-top: 10px;
-    font-size: 40px;
+    font-size: 60px;
     vertical-align: central;
     font-weight: bold;
     width: 78%;
