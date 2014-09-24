@@ -1,6 +1,6 @@
 Components.Module = Marionette.Module.extend({
    onStart:function(){
-       console.log('module.started');
+       //here should be dynamic loading of files
    } 
 });
 

@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
 
+    
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -22,12 +23,16 @@ module.exports = function(grunt) {
         }
     }
   });
-
+  var f = grunt.file.read('src/app/modules');
+  console.log(f);
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
 
   // Default task(s).
   grunt.registerTask('build', ['copy:dev']);
+  grunt.registerTask('concat_module_content','Concat moulse content: views, models, templates etc.',function(){
+      
+  });
 
 };
