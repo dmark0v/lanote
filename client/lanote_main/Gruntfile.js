@@ -1,38 +1,96 @@
-module.exports = function(grunt) {
 
-    
-  // Project configuration.
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    copy:{
-        dev:{
+
+module.exports = function (grunt) {
+
+    var module_dirs = {static:'src/app/static'};
+    grunt.file.recurse('src/app/modules/', function (abspath, rootdir, subdir, filename) {
+        if (subdir.indexOf('/') >= 0)
+        {
+            return;
+        }
+        module_dirs[subdir] = 'src/app/modules/'+subdir;
+    });
+    var concat_config = {
+        components:{
+            options:{
+                banner:'/*Components of lanote*/\n'
+            },
+            src:'src/app/components/*.js',
+            dest:'build/development/app/components.js'
+        }
+    };
+    var copy_config = {
+        main:{
             cwd:'src',
-            src:'**',
+            src:'*.*',
             dest:'build/development',
             expand:true
+        },
+        libs: {
+            cwd: 'src/js',
+            src: '**',
+            dest: 'build/development/js',
+            expand: true
+        },
+        img: {
+            cwd: 'src/img',
+            src: '**',
+            dest: 'build/development/img',
+            expand: true
+        },
+        styles:{
+            cwd: 'src/styles',
+            src: '*.css',
+            dest: 'build/development/styles',
+            expand: true
         }
-    },
-    sass:{
-        dist:{
+    };
+    for (var module in module_dirs)
+    {
+        concat_config['md_'+module+'_js'] = {
             options:{
-                style:'expanded'
+                banner:'/*Views and modules of ' + module + 'module*/\n'
             },
-            files:{
-                'src/styles/main_new.css':'src/styles/scss/main.scss'
+            src:[module_dirs[module]+'/*/*.js'],
+            dest:module_dirs[module].replace('src','build/development') + '/' + module + '_js.js'
+        };
+        concat_config['md_'+module+'_templates'] = {
+            src:[module_dirs[module]+'/*/*.tpl'],
+            dest:module_dirs[module].replace('src','build/development') + '/' + module + '_template.tpl'
+        };
+        copy_config['md_'+module] = {
+            cwd:module_dirs[module],
+            src:[module + '.js'],
+            expand:true,
+            dest:module_dirs[module].replace('src','build/development')
+        };
+        
+    }
+    
+    // Project configuration.
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        concat:concat_config,
+        copy: copy_config,
+        sass: {
+            dist: {
+                options: {
+                    style: 'expanded'
+                },
+                files: {
+                    'src/styles/main_new.css': 'src/styles/scss/main.scss'
+                }
             }
         }
-    }
-  });
-  var f = grunt.file.read('src/app/modules');
-  console.log(f);
-  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+    });
 
-  // Default task(s).
-  grunt.registerTask('build', ['copy:dev']);
-  grunt.registerTask('concat_module_content','Concat moulse content: views, models, templates etc.',function(){
-      
-  });
+
+    // Load the plugin that provides the "uglify" task.
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    // Default task(s).
+    grunt.registerTask('build', ['copy','concat']);
+    grunt.registerTask('main', ['copy:main']);
 
 };
