@@ -40,9 +40,15 @@ module.exports = function (grunt) {
         },
         styles:{
             cwd: 'src/styles',
-            src: '*.css',
+            src: ['*.css','*.map'],
             dest: 'build/development/styles',
             expand: true
+        },
+        app:{
+            cwd:'src/app',
+            src:'*.*',
+            dest:'build/development/app',
+            expand:true
         }
     };
     for (var module in module_dirs)
@@ -55,6 +61,14 @@ module.exports = function (grunt) {
             dest:module_dirs[module].replace('src','build/development') + '/' + module + '_js.js'
         };
         concat_config['md_'+module+'_templates'] = {
+            options:{
+                process:function(src, filepath,chto){
+                    var fileParts = filepath.split('/');
+                    var fileName = fileParts[fileParts.length - 1];
+                    fileName = fileName.split('.')[0];
+                    return '<!--@' + fileName + '@-->' + '<!--@@@-->' + src + '<!--@@@-->';
+                }
+            },
             src:[module_dirs[module]+'/*/*.tpl'],
             dest:module_dirs[module].replace('src','build/development') + '/' + module + '_template.tpl'
         };
@@ -91,6 +105,4 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     // Default task(s).
     grunt.registerTask('build', ['copy','concat']);
-    grunt.registerTask('main', ['copy:main']);
-
 };

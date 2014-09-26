@@ -1,1 +1,1 @@
-<!--static-userinfo.tpl-->
+<div id="userInfo"></div>

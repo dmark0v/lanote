@@ -1,1 +1,1 @@
-<!--static-footer.tpl-->
+<div id="footer"></div>

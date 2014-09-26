@@ -1,6 +1,8 @@
 lanote.modules.static = lanote.module('static',Components.Module.extend({
     directory:'app/static',
-    startWithParent:false
+    onStart:function(){
+        lanote.header.show(new HeaderView);
+    }
 }));
 
 
