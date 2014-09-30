@@ -1,4 +1,6 @@
-HeaderView = Backbone.Marionette.ItemView.extend({
+window.HeaderView = Components.Form.extend({
     template:'#static-header',
-    //el:$('#header')[0]
+    views:{
+        userinfo:UserInfoView
+    }
 });

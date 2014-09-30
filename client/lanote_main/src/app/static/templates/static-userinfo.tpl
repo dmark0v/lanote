@@ -1,1 +1,1 @@
-<div id="userInfo"></div>
+<a>Войти</a><span></span><a>Зарегистрироваться</a>
