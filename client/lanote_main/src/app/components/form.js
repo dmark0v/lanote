@@ -3,7 +3,6 @@ Components.Form = Marionette.ItemView.extend({
         this._ensureViewIsIntact();
 
         this.triggerMethod('before:render', this);
-        debugger;
         this._renderTemplate();
         this._renderViews();
         this.bindUIElements();
@@ -44,7 +43,6 @@ Components.Form = Marionette.ItemView.extend({
         return data;
     },
     _renderViews:function(){
-        debugger;
         _.each(this.views,function(view,name){
             if(_.isFunction(view))
             {

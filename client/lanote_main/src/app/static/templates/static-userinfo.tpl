@@ -1,1 +1,1 @@
-<a>Войти</a><span></span><a>Зарегистрироваться</a>
+<div class="sign-btn">Войти</div><div class="sign-separator"></div><div class="sign-btn">Зарегестрироваться</div>

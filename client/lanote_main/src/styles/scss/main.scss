@@ -19,17 +19,18 @@ $colors-dark-2:#497D7A;
 
 body {
     background-color: $colors-light-0;
+    font-family: "Open Sans", "Helvetica", "Arial", "FreeSans", "Verdana", "Tahoma", "Lucida Sans", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
 }
 
 #header {
     height:50px;
     div{
-        float:left;
         height:60px;
-        padding-top: 8px;
         font-family: $font-header;
+        padding-top: 10px;
     }
     .header-logo{
+        float:left;
         font-size: 40px;
         text-align: right;
         vertical-align: central;
@@ -38,14 +39,15 @@ body {
         color:$colors-light-1;
         background-color:$colors-dark-0;
         padding-right: 5px;
+        
     }
     .header-separator{
+        float:left;
         width:5px;
         background-color: $colors-dark-1;
     }
     .header-main{
         padding-left: 5px;
-        padding-top: 10px;
         font-size: 40px;
         vertical-align: central;
         font-weight: bold;
@@ -53,10 +55,46 @@ body {
         overflow:hidden;
         background-color:$colors-middle-0;
         color:$colors-dark-2;
+        position: absolute;
+        left:214px;
     }
     .header-signup{
         font-size: 14px;
         width:203px;
         background-color:$colors-dark-0;
+        float:right;
+        padding-top:0px;
+        height:55px;
+        div.sign-btn{
+            padding: 7px 0px;
+            background: $colors-dark-0;
+            color: $colors-dark-2;
+            cursor:pointer;
+            font-size: 14px;
+            font-weight: 700;
+            height:20px;
+            text-align: center;
+            
+        }
+        div.sign-btn:hover{
+            background: $colors-dark-2;
+            color: $colors-light-0;
+            border-radius: 3px;
+        }
+        div.sign-separator{
+            background: $colors-middle-0;
+            height:2px;
+            padding-top: 0px;
+        }
     }
+}
+button{
+    border-radius: 3px;
+    padding: 10px 20px;
+    background: $colors-dark-2;
+    border: none;
+    color: $colors-light-0;
+    cursor:pointer;
+    font-size: 12px;
+    font-weight: 700;
 }

@@ -104,5 +104,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     // Default task(s).
-    grunt.registerTask('build', ['copy','concat']);
+    grunt.registerTask('build', ['sass','copy','concat']);
 };

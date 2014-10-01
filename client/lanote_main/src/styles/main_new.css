@@ -9,18 +9,19 @@ and open the template in the editor.
 */
 body {
   background-color: #FCFAEE;
+  font-family: "Open Sans", "Helvetica", "Arial", "FreeSans", "Verdana", "Tahoma", "Lucida Sans", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
 }
 
 #header {
   height: 50px;
 }
 #header div {
-  float: left;
   height: 60px;
-  padding-top: 8px;
   font-family: "Aliquam";
+  padding-top: 10px;
 }
 #header .header-logo {
+  float: left;
   font-size: 40px;
   text-align: right;
   vertical-align: central;
@@ -31,12 +32,12 @@ body {
   padding-right: 5px;
 }
 #header .header-separator {
+  float: left;
   width: 5px;
   background-color: #68B3AF;
 }
 #header .header-main {
   padding-left: 5px;
-  padding-top: 10px;
   font-size: 40px;
   vertical-align: central;
   font-weight: bold;
@@ -44,11 +45,47 @@ body {
   overflow: hidden;
   background-color: #D3E2B6;
   color: #497D7A;
+  position: absolute;
+  left: 214px;
 }
 #header .header-signup {
   font-size: 14px;
   width: 203px;
   background-color: #AACCB1;
+  float: right;
+  padding-top: 0px;
+  height: 55px;
+}
+#header .header-signup div.sign-btn {
+  padding: 7px 0px;
+  background: #AACCB1;
+  color: #497D7A;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  height: 20px;
+  text-align: center;
+}
+#header .header-signup div.sign-btn:hover {
+  background: #497D7A;
+  color: #FCFAEE;
+  border-radius: 3px;
+}
+#header .header-signup div.sign-separator {
+  background: #D3E2B6;
+  height: 2px;
+  padding-top: 0px;
+}
+
+button {
+  border-radius: 3px;
+  padding: 10px 20px;
+  background: #497D7A;
+  border: none;
+  color: #FCFAEE;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=main_new.css.map */
