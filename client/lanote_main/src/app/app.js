@@ -1,4 +1,6 @@
-window.Components = {};
+window.Components = {
+    
+};
 
 window.lanote = new Backbone.Marionette.Application();
 

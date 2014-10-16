@@ -1,5 +1,3 @@
-
-
 module.exports = function (grunt) {
 
     var module_dirs = {static:'src/app/static'};
@@ -20,6 +18,12 @@ module.exports = function (grunt) {
         }
     };
     var copy_config = {
+        single:{
+            cwd:'src',
+            src:'*.*',
+            dest:'build/development',
+            expand:true
+        },
         main:{
             cwd:'src',
             src:'*.*',
@@ -53,11 +57,20 @@ module.exports = function (grunt) {
     };
     for (var module in module_dirs)
     {
+        var viewsDir = module_dirs[module] + '/views/map.json';
+        var viewsSrc;
+        try{
+            viewsSrc = grunt.file.readJSON(viewsDir).src;
+            for(var i=0;i<viewsSrc.length;i++)
+            {
+                viewsSrc[i] = module_dirs[module] + '/views/' + viewsSrc[i];
+            }
+        } catch(e) {}
         concat_config['md_'+module+'_js'] = {
             options:{
                 banner:'/*Views and modules of ' + module + 'module*/\n'
             },
-            src:[module_dirs[module]+'/*/*.js'],
+            src:(viewsSrc)?viewsSrc:[module_dirs[module]+'/*/*.js'],
             dest:module_dirs[module].replace('src','build/development') + '/' + module + '_js.js'
         };
         concat_config['md_'+module+'_templates'] = {
@@ -86,6 +99,16 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         concat:concat_config,
         copy: copy_config,
+        watch:{
+            options:{
+                spawn:true  
+            },
+            js:{
+                files:'src/app/*.js',
+                tasks:['copy:single']
+            }
+            
+        },
         sass: {
             dist: {
                 options: {
@@ -95,14 +118,22 @@ module.exports = function (grunt) {
                     'src/styles/main_new.css': 'src/styles/scss/main.scss'
                 }
             }
-        }
+        },
+
+    });
+    grunt.event.on('watch',function(action,filepath){
+       if(action === 'changed')
+       {
+           var file = filepath.replace('src/','');
+           console.log(file);
+       }
     });
 
-
-    // Load the plugin that provides the "uglify" task.
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     // Default task(s).
     grunt.registerTask('build', ['sass','copy','concat']);
+
 };
