@@ -5,7 +5,8 @@ window.Components = {
 window.lanote = new Backbone.Marionette.Application();
 
 lanote.addRegions({
-    header:'#header'
+    header:'#header',
+    content:'#content'
 });
 
 

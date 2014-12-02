@@ -11,7 +11,7 @@ Marionette.TemplateCache.storeTemplate = function (templateId, template) {
 Marionette.Region.prototype.attachHtml = function (view)
 {
     this.el.innerHTML = '';
-    if (this.tagName)
+    if (view.tagName)
     {
         this.el.appendChild(view.el);
     } else
