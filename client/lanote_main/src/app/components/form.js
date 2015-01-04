@@ -46,14 +46,17 @@ Components.Form = Marionette.ItemView.extend({
         _.each(this.views,function(view,name){
             if(_.isFunction(view))
             {
-                view = new view;
+                view = this[name] = new view;
                 this.$('#' + name).replaceWith(view.render().el);
             } else
             {
                 view.render();
             }
+            view.parentView = this;
             
         }.bind(this));
+    },
+    onBeforeDestroy:function(){
+        //do it
     }
 });
-

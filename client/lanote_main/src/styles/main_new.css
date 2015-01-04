@@ -30,16 +30,16 @@ html {
 
 body {
   background-color: #FCFAEE;
-  font-family: Georgia, serif;
+  font-family: 'Arian AMU';
 }
 
 #header {
   height: 70px;
-}
-#header div {
-  height: 60px;
-  font-family: "Aliquam";
-  padding-top: 10px;
+  /*div{
+      height:60px;
+      font-family: $font-header;
+      padding-top: 10px;
+  }*/
 }
 #header .header-logo {
   float: left;
@@ -98,6 +98,15 @@ body {
   padding-top: 0px;
 }
 
+#header > div {
+  height: 60px;
+  padding-top: 10px;
+}
+
+#header-logo, #header-main {
+  font-family: "Aliquam";
+}
+
 #page-wrapper {
   min-height: 100%;
   margin-bottom: -20px;
@@ -126,6 +135,60 @@ button {
   cursor: pointer;
   font-size: 12px;
   font-weight: 700;
+}
+
+input {
+  font-size: 20px;
+  padding: 4px;
+  border: 2px solid #68B3AF;
+  border-radius: 2px;
+  background: #F8F4D7;
+  color: #162625;
+}
+
+.input-form {
+  margin: 10px 0px;
+  position: relative;
+}
+.input-form input {
+  width: 100%;
+  border: 2px solid gray;
+  background: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 8px 12px;
+  outline: 0;
+  padding: 12px 12px 12px 12px;
+}
+.input-form input:focus {
+  border-color: #f06d06;
+}
+.input-form input:focus + label {
+  background: #f06d06;
+  color: white;
+  font-size: 70%;
+  padding: 1px 6px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+.input-form label {
+  transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+  position: absolute;
+  color: #999;
+  padding: 7px 6px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.input-form input:focus {
+  padding: 4px 6px 20px 6px;
+}
+.input-form input:focus + label {
+  top: 100%;
+  margin-top: -16px;
 }
 
 #mask {

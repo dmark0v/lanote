@@ -30,16 +30,22 @@ module.exports = function (grunt) {
         }
     };
     var copy_config = {
-        single:{
+        main:{
             cwd:'src',
             src:'*.*',
             dest:'build/development',
             expand:true
         },
-        main:{
-            cwd:'src',
-            src:'*.*',
-            dest:'build/development',
+        locale: {
+            cwd: 'src/locale',
+            src: '**',
+            dest: 'build/development/locale',
+            expand: true
+        },
+        fonts:{
+            cwd:'src/fonts',
+            src:'**',
+            dest: 'build/development/fonts',
             expand:true
         },
         libs: {
@@ -130,22 +136,15 @@ module.exports = function (grunt) {
                     'src/styles/main_new.css': 'src/styles/scss/main.scss'
                 }
             }
-        },
+        }
 
     });
-    /*grunt.event.on('watch',function(action,filepath){
-       if(action === 'changed')
-       {
-           var file = filepath.replace('src/','');
-           console.log(file);
-       }
-    });*/
 
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    // Default task(s).
+    
     grunt.registerTask('build', ['sass','copy','concat']);
 
 };

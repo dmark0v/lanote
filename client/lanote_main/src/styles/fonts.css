@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Aliquam';
+    src: local('Aliquam'), local('Aliquam Regular'), url('../fonts/aliquam/aliquamreg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aliquam';
+    src: local('Aliquam UltraLight'), local('Aliquam-UltraLight'), url('../fonts/aliquam/aliquam.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aliquam';
+    src: local('Aliquam Italic'), local('Aliquam-Italic'), url('../fonts/aliquam/aliquamrit.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Aliquam';
+    src: local('Aliquam Ultralight Italic'), local('Aliquam-UltralightItalic'), url('../fonts/aliquam/aliquamulti.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Amaranth';
+    src: local('Amaranth'), url('../fonts/amaranth/amaranth-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Amaranth';
+    src: local('Amaranth Bold'), local('Amaranth-Bold'), url('../fonts/amaranth/amaranth-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Amaranth';
+    src: local('Amaranth Italic'), local('Amaranth-Italic'), url('../fonts/amaranth/amaranth-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Amaranth';
+    src: local('Amaranth Bold Italic'), local('Amaranth-BoldItalic'), url('../fonts/amaranth/amaranth-bolditalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Arian AMU';
+    src: local('Arian AMU'), url('../fonts/arnamu/arnamu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Arian AMU';
+    src: local('Arian AMU'), local('Arian AMU Bold'), url('../fonts/arnamu/arnamu_bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Arian AMU';
+    src: local('Arian AMU'), local('Arian AMU Italic'), url('../fonts/arnamu/arnamu_italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+@font-face {
+    font-family: 'Arian AMU';
+    src: local('Arian AMU'), local('Arian AMU Bold Italic'), url('../fonts/arnamu/arnamu_italic_bold.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
