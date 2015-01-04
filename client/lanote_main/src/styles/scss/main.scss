@@ -17,9 +17,31 @@ $colors-dark-0:#AACCB1;
 $colors-dark-1:#68B3AF;
 $colors-dark-2:#497D7A;
 
+
+* {
+  margin: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html,body{
+    height: 100%;
+}
+html{
+    
+    font-size: 1em;
+    line-height: 1.4;
+}
+
 body {
     background-color: $colors-light-0;
-    font-family: "Open Sans", "Helvetica", "Arial", "FreeSans", "Verdana", "Tahoma", "Lucida Sans", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
+    font-family: Georgia, serif;
 }
 
 #header {
@@ -88,6 +110,21 @@ body {
         }
     }
 }
+#page-wrapper{
+    min-height: 100%;
+    margin-bottom: -20px; 
+}
+#page-wrapper:after{
+    content:"";
+    display: block;
+}
+#footer,#page-wrapper:after{
+    height:20px;
+}
+#footer{
+    background: $colors-dark-2;
+    color: $colors-light-0;
+}
 button{
     border-radius: 3px;
     padding: 10px 20px;
@@ -98,3 +135,40 @@ button{
     font-size: 12px;
     font-weight: 700;
 }
+#mask{
+    display: none;
+    opacity: 0;
+    position:absolute;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    background: $colors-middle-0;
+}
+.modal-wrapper{
+    position: absolute;
+    left:50%;
+    top:50%;
+    z-index:100;
+    .modal{
+        display: none;
+        position: relative;
+        left:-50%;
+        top:-50%;
+        padding:40px 40px;
+        border: 2px solid $colors-dark-2;
+        border-radius: 2px;
+        background: $colors-dark-0;
+    }
+    .modal-header{
+        padding: 10px;
+        background: $colors-middle-0;
+        opacity:0.75;
+        .modal-header-title{
+            color: $colors-dark-2;
+            font-weight: bold;
+            opacity: 1;
+        }
+    }
+}
+

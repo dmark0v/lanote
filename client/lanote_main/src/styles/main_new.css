@@ -7,9 +7,30 @@ and open the template in the editor.
     Created on : 10.09.2014, 20:31:39
     Author     : MrUnkn0wn
 */
+* {
+  margin: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
 body {
   background-color: #FCFAEE;
-  font-family: "Open Sans", "Helvetica", "Arial", "FreeSans", "Verdana", "Tahoma", "Lucida Sans", "Lucida Sans Unicode", "Luxi Sans", sans-serif;
+  font-family: Georgia, serif;
 }
 
 #header {
@@ -77,6 +98,25 @@ body {
   padding-top: 0px;
 }
 
+#page-wrapper {
+  min-height: 100%;
+  margin-bottom: -20px;
+}
+
+#page-wrapper:after {
+  content: "";
+  display: block;
+}
+
+#footer, #page-wrapper:after {
+  height: 20px;
+}
+
+#footer {
+  background: #497D7A;
+  color: #FCFAEE;
+}
+
 button {
   border-radius: 3px;
   padding: 10px 20px;
@@ -86,6 +126,44 @@ button {
   cursor: pointer;
   font-size: 12px;
   font-weight: 700;
+}
+
+#mask {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #D3E2B6;
+}
+
+.modal-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+}
+.modal-wrapper .modal {
+  display: none;
+  position: relative;
+  left: -50%;
+  top: -50%;
+  padding: 40px 40px;
+  border: 2px solid #497D7A;
+  border-radius: 2px;
+  background: #AACCB1;
+}
+.modal-wrapper .modal-header {
+  padding: 10px;
+  background: #D3E2B6;
+  opacity: 0.75;
+}
+.modal-wrapper .modal-header .modal-header-title {
+  color: #497D7A;
+  font-weight: bold;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main_new.css.map */

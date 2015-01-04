@@ -15,6 +15,18 @@ module.exports = function (grunt) {
             },
             src:'src/app/components/*.js',
             dest:'build/development/app/components.js'
+        },
+        components_templates:{
+            src:'src/app/components/templates/*.tpl',
+            dest:'build/development/app/component_templates.tpl',
+            options:{
+                process:function(src, filepath){
+                    var fileParts = filepath.split('/');
+                    var fileName = fileParts[fileParts.length - 1];
+                    fileName = fileName.split('.')[0];
+                    return '<!--@' + fileName + '@-->' + '<!--@@@-->' + src + '<!--@@@-->';
+                }            
+            }
         }
     };
     var copy_config = {
@@ -75,7 +87,7 @@ module.exports = function (grunt) {
         };
         concat_config['md_'+module+'_templates'] = {
             options:{
-                process:function(src, filepath,chto){
+                process:function(src, filepath){
                     var fileParts = filepath.split('/');
                     var fileName = fileParts[fileParts.length - 1];
                     fileName = fileName.split('.')[0];
@@ -121,13 +133,13 @@ module.exports = function (grunt) {
         },
 
     });
-    grunt.event.on('watch',function(action,filepath){
+    /*grunt.event.on('watch',function(action,filepath){
        if(action === 'changed')
        {
            var file = filepath.replace('src/','');
            console.log(file);
        }
-    });
+    });*/
 
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-sass');
