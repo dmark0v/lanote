@@ -1,9 +1,8 @@
-Components.TextEditor = Backbone.Marionette.View.extend({
-    tagName:'textarea',
-    onShow:function(){
-        tinymce.init({
-           selector:'textarea' 
-        });
+Components.TextEditor = Backbone.Marionette.ItemView.extend({
+    template:'#cmp-texteditor',
+    onRender:function(){
+        debugger;
+        this.$('textarea').tinymce({});
     }
 });
 

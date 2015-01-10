@@ -48,15 +48,24 @@ Components.Form = Marionette.ItemView.extend({
             {
                 view = this[name] = new view;
                 this.$('#' + name).replaceWith(view.render().el);
-            } else
+                view.parentView = this;
+            } else if(view)
             {
                 view.render();
+                view.parentView = this;
             }
-            view.parentView = this;
+            
             
         }.bind(this));
     },
     onBeforeDestroy:function(){
         //do it
+    },
+    getInputValues:function(){
+        var res = {};
+        this.$('input[name]').each(function(i,el){
+            res[el.name] = el.value;
+        });
+        return res;
     }
 });

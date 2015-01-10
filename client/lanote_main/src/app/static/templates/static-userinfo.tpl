@@ -1,4 +1,3 @@
-<div id="sign-in" class="sign-btn"><%=lanote.locale.modules.static.userinfo.signin%></div>
+<div id="profile-modal" class="sign-btn"><%=lanote.locale.modules.static.userinfo.profile%></div>
 <div class="sign-separator"></div>
-<div id="sign-up" class="sign-btn"><%=lanote.locale.modules.static.userinfo.signup%></div>
-<%=views.signin%>
+<div id="logout" class="sign-btn"><%=lanote.locale.modules.static.userinfo.exit%></div>

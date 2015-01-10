@@ -76,7 +76,7 @@ module.exports = function (grunt) {
     for (var module in module_dirs)
     {
         var viewsDir = module_dirs[module] + '/views/map.json';
-        var viewsSrc;
+        var viewsSrc = undefined;
         try{
             viewsSrc = grunt.file.readJSON(viewsDir).src;
             for(var i=0;i<viewsSrc.length;i++)
@@ -111,7 +111,6 @@ module.exports = function (grunt) {
         };
         
     }
-    
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),

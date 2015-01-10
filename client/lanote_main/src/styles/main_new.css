@@ -16,7 +16,7 @@ button,
 input,
 select,
 textarea {
-  color: #222;
+  color: #162625;
 }
 
 html, body {
@@ -127,19 +127,39 @@ body {
 }
 
 button {
+  border: 2px solid #497D7A;
   border-radius: 3px;
-  padding: 10px 20px;
+  padding: 6px 20px;
   background: #497D7A;
-  border: none;
   color: #FCFAEE;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
+  text-align: center;
+}
+button:hover {
+  color: #497D7A;
+  background: #D3E2B6;
+  border: 2px solid #497D7A;
+}
+button:focus {
+  border: 2px solid #497D7A;
+}
+
+.btn-wrapper {
+  text-align: center;
+}
+.btn-wrapper button {
+  margin: 10px;
+  display: inline-block;
+}
+
+button.btn-md {
+  width: 150px;
 }
 
 input {
   font-size: 20px;
-  padding: 4px;
   border: 2px solid #68B3AF;
   border-radius: 2px;
   background: #F8F4D7;
@@ -149,6 +169,8 @@ input {
 .input-form {
   margin: 10px 0px;
   position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .input-form input {
   width: 100%;
@@ -160,17 +182,19 @@ input {
   z-index: 1;
   padding: 8px 12px;
   outline: 0;
-  padding: 12px 12px 12px 12px;
+}
+.input-form input:valid {
+  background: #F8F4D7;
 }
 .input-form input:focus {
-  border-color: #f06d06;
+  border-color: #497D7A;
 }
 .input-form input:focus + label {
-  background: #f06d06;
-  color: white;
+  background: #497D7A;
+  color: #F8F4D7;
   font-size: 70%;
   padding: 1px 6px;
-  z-index: 2;
+  z-index: 3;
   text-transform: uppercase;
 }
 .input-form label {
@@ -183,12 +207,32 @@ input {
   left: 0;
   width: 100%;
 }
+.input-form span.error + input {
+  padding: 4px 12px 20px 12px;
+}
+.input-form span.error {
+  background: #FF5C33;
+  color: #F8F4D7;
+  font-size: 70%;
+  padding: 1px 6px;
+  z-index: 2;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  top: 100%;
+  margin-top: -16px;
+}
 .input-form input:focus {
-  padding: 4px 6px 20px 6px;
+  padding: 4px 12px 20px 12px;
 }
 .input-form input:focus + label {
   top: 100%;
   margin-top: -16px;
+}
+.input-form input.input-md {
+  width: 320px;
 }
 
 #mask {
@@ -205,15 +249,14 @@ input {
 .modal-wrapper {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 0px;
   z-index: 100;
 }
 .modal-wrapper .modal {
   display: none;
   position: relative;
   left: -50%;
-  top: -50%;
-  padding: 40px 40px;
+  padding: 10px 40px;
   border: 2px solid #497D7A;
   border-radius: 2px;
   background: #AACCB1;
@@ -224,9 +267,10 @@ input {
   opacity: 0.75;
 }
 .modal-wrapper .modal-header .modal-header-title {
-  color: #497D7A;
+  color: #162625;
   font-weight: bold;
   opacity: 1;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=main_new.css.map */

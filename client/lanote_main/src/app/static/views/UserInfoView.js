@@ -1,13 +1,21 @@
-window.UserInfoView = Components.Form.extend({
+lanote.modules.static.UserInfoView = Components.Form.extend({
     template:'#static-userinfo',
     className:'header-signup',
     events:{
-        'click #sign-in':'openSignInWindow'
+        'click #logout':'logout'
     },
-    views:{
-        signin:Components.ModalWindow
-    },
-    openSignInWindow:function(){
-        this.signin.open();
+    logout:function(){
+        var model =new (Components.Model.extend({
+            restResource:'logout'
+        }));
+        model.fetch({
+            dataType:'text',
+            success:function(){
+                lanote.static.getUserSession();
+            }.bind(),
+            error:function(){
+                //TODO: show what user is incorrect
+            }
+        });
     }
 });

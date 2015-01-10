@@ -17,6 +17,7 @@ $colors-dark-0:#AACCB1;
 $colors-dark-1:#68B3AF;
 $colors-dark-2:#497D7A;
 $colors-dark-3:#162625;
+$colors-error:#FF5C33;
 
 
 * {
@@ -28,7 +29,7 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: $colors-dark-3;
 }
 
 html,body{
@@ -134,18 +135,38 @@ body {
     color: $colors-light-0;
 }
 button{
+    border: 2px solid $colors-dark-2;
     border-radius: 3px;
-    padding: 10px 20px;
+    padding: 6px 20px;
     background: $colors-dark-2;
-    border: none;
     color: $colors-light-0;
     cursor:pointer;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
+    text-align: center;
+    &:hover{
+        color: $colors-dark-2;
+        background: $colors-middle-0;
+        border: 2px solid $colors-dark-2;
+    }
+    &:focus{
+        border: 2px solid $colors-dark-2;
+    }
+    
+}
+.btn-wrapper{
+    text-align: center;
+    button{
+        margin:10px;
+        display:inline-block;
+    }
+}
+button.btn-md{
+    width:150px;
 }
 input{
     font-size: 20px;
-    padding: 4px;
+    //padding: 4px;
     border: 2px solid $colors-dark-1;
     border-radius: 2px;
     background: $colors-light-1;
@@ -155,6 +176,8 @@ input{
 .input-form{
     margin: 10px 0px;
     position:relative;
+    box-sizing:border-box;
+    overflow: hidden;
     input {
         width: 100%;
         border: 2px solid gray; 
@@ -165,24 +188,24 @@ input{
         z-index: 1;
         padding: 8px 12px;
         outline: 0;
-        padding: 12px 12px 12px 12px; 
+      
         &:valid {
             // Hides the label
-            //background: white; 
+            background: $colors-light-1; 
         }
         &:focus {
-            border-color: #f06d06;
+            border-color: $colors-dark-2;
         }
         &:focus + label {
-            background: #f06d06;
-            color: white;
+            background:  $colors-dark-2;
+            color: $colors-light-1;
             font-size: 70%;
             padding: 1px 6px;
-            z-index: 2;
+            z-index: 3;
             text-transform: uppercase;
         }
     }
-    label {
+    label{
         transition: // not padding
             background 0.2s,
             color 0.2s,
@@ -198,12 +221,33 @@ input{
         left: 0;
         width: 100%;    
     }
+    span.error+input{
+        padding: 4px 12px 20px 12px; 
+    }
+    span.error{
+        background:  $colors-error;
+        color: $colors-light-1;
+        font-size: 70%;
+        padding: 1px 6px;
+        z-index: 2;
+        text-transform: uppercase;     
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;    
+        top:100%;
+        margin-top: -16px;
+    }
+    
     input:focus {
-        padding: 4px 6px 20px 6px; 
+        padding: 4px 12px 20px 12px; 
     }
     input:focus + label{
         top: 100%;
         margin-top: -16px;
+    }
+    input.input-md{
+        width:320px
     }
 }
 #mask{
@@ -219,14 +263,13 @@ input{
 .modal-wrapper{
     position: absolute;
     left:50%;
-    top:50%;
+    top:0px;
     z-index:100;
     .modal{
         display: none;
         position: relative;
         left:-50%;
-        top:-50%;
-        padding:40px 40px;
+        padding:10px 40px;
         border: 2px solid $colors-dark-2;
         border-radius: 2px;
         background: $colors-dark-0;
@@ -236,9 +279,10 @@ input{
         background: $colors-middle-0;
         opacity:0.75;
         .modal-header-title{
-            color: $colors-dark-2;
+            color: $colors-dark-3;
             font-weight: bold;
             opacity: 1;
+            font-size: 18px;
         }
     }
 }

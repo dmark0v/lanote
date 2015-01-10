@@ -3,7 +3,9 @@ lanote.locale.modules = {
     static:{
         userinfo:{
             signin:'Вход',
-            signup:'Регистрация'
+            signup:'Регистрация',
+            profile:'Профиль',
+            exit:'Выход'
         }
     }
 }

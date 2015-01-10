@@ -34,7 +34,6 @@ app.get('/ErrorExample', function(req, res, next){
 });
 
 app.get('/api',function(req,res){
-   log.info('ahahaha');
    res.send('<b>LANOTE REST API</b>'); 
 });
 
