@@ -46,3 +46,11 @@ Backbone.View.prototype._ensureElement = function() {
         this.setElement(_.result(this, 'el'), false);
     }
 }
+Backbone.Model.prototype.url = function ()
+{
+    if (_.isFunction(this.restResource))
+    {
+        this.restResource = this.restResource();
+    }
+    return lanote.config.rest + this.restResource + ((this.restPath) ? this.restPath : '');
+}

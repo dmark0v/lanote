@@ -10,13 +10,11 @@ module.exports = {
         if(!username||!password){
             return res.badRequest();
         }
-        console.log('2');
         User.findOneByUsername(username).exec(function(err,user){
             if(err)
             {
                 return res.serverError();
             }
-            console.log('2');
             if(!user)
             {
                 return res.json(400,{error:'user not found'});

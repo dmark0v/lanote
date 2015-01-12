@@ -13,6 +13,7 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/font-awesome.min.css">
         <link rel="stylesheet" href="styles/fonts.css">
         <link rel="stylesheet" href="styles/main_new.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -21,34 +22,14 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
+        <!--[if Opera]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+         <![endif]-->
         <div id="page-wrapper">
             <!-- Add your site or application content here -->
             <div id="header"  class="clearfix">
-                <!--div class="header-logo">la</div>
-                <div class="header-separator"></div>
-                <div class="header-main">note</div>
-                <div class="header-signup"><a>Войти</a><span></span><a>Зарегистрироваться</a></div-->
             </div>
-            <div id="content">
-                <!--div class="modal-wrapper">    
-                    <fieldset class="modal">
-                        <legend class="modal-header">
-                            <span class="modal-header-title">Модальное окно</span>
-                        </legend>    
-                        <div class="modal-body">
-                            <div class="input-form">
-                                <label>Логин</label>
-                                <input type="text" placeholder="Логин">
-                            </div>
-                            <div class="input-form">
-                                <label>Пароль</label>
-                                <input type="password" placeholder="Пароль">
-                            </div>
-                            <button>Войти</button>
-                        </div>    
-                    </fieldset>
-                </div--->    
+            <div id="content" class="clearfix">
             </div>
             
         </div>
@@ -62,9 +43,10 @@
         <script src="js/vendor/json2.js"></script>
         <script src="js/vendor/backbone.js"></script>
         <script src="js/vendor/backbone.marionette.min.js"></script>
+        <script src="js/vendor/backbone.treemodel.js"></script>
         <script src="js/vendor/sha1.js"></script>
-        <script src="js/vendor/tinymce/tinymce.js"></script>
-        <script src="js/vendor/tinymce/jquery.tinymce.min.js"></script>
+        <script src="js/vendor/advanced.js"></script>
+        <script src="js/vendor/wysihtml5-0.3.0.min.js"></script>
         
         <script src="js/plugins.js"></script>
         
@@ -78,6 +60,7 @@
         <!--Modules-->
         <script src="app/static/static.js"></script>
         <script src="app/modules/starting/starting.js"></script>
+        <script src="app/modules/desktop/desktop.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

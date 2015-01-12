@@ -16,7 +16,7 @@ lanote.modules.static = lanote.module('static',Components.Module.extend({
                 var headerView = new HeaderView();
                 headerView.views.uiForm = lanote.modules.static.UserInfoView;
                 lanote.header.show(headerView);
-                //lanote.modules.note.start();
+                lanote.modules.desktop.start();
                 
             },
             //user not logged

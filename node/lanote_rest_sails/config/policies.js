@@ -39,6 +39,20 @@ module.exports.policies = {
        getUser:true,
        logout:'isLoggedIn'
        
+   },
+   'SectionController':{
+       create:true,
+       edit:true,
+       update:true,
+       destroy:true,
+       find:true
+   },
+   'NoteController':{
+       create:true,
+       edit:true,
+       update:true,
+       destroy:true,
+       find:true
    }
    
 

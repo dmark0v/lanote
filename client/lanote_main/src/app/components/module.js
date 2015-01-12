@@ -44,7 +44,7 @@ Components.Module = Marionette.Module.extend({
             return this.loadTemplate(url);
         }
     },
-    //rewrite start function for including dynamic loading
+    //rewriting start function for including dynamic loading
     // of scripts and templates
     start: function (options) {
         if (this._isInitialized) {
@@ -59,6 +59,14 @@ Components.Module = Marionette.Module.extend({
 
         this._initializerCallbacks.run(options, this);
         this._isInitialized = true;
+        if(this.isPage)
+        {
+            if(lanote.activeModule)
+            {
+                lanote.activeModule.stop();
+                lanote.activeModule = this;
+            }
+        }
         if(this.loadFiles)
         {
             var defs = [];
@@ -89,6 +97,9 @@ Components.Module = Marionette.Module.extend({
             this.triggerMethod('start', options);
         }
         
+    },
+    onStop:function(){
+        lanote.content.close();
     }
 });
 
