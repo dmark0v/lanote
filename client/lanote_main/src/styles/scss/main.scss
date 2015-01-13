@@ -111,7 +111,7 @@ body {
         }
     }
 }
-#header>div{
+#header>div>div{
     height:60px;
     padding-top: 10px;
 }
@@ -150,6 +150,7 @@ button{
     }
     &:focus{
         border: 2px solid $colors-dark-2;
+        outline:0;
     }
     
 }
@@ -220,9 +221,6 @@ input{
         left: 0;
         width: 100%;    
     }
-    span.error+input{
-        padding: 4px 12px 20px 12px; 
-    }
     span.error{
         background:  $colors-error;
         color: $colors-light-1;
@@ -238,7 +236,7 @@ input{
         margin-top: -16px;
     }
     
-    input:focus {
+    input:focus, span.error + input {
         padding: 4px 12px 20px 12px; 
     }
     input:focus + label{
@@ -352,12 +350,18 @@ input{
             background: $colors-middle-0;
             border: 2px solid $colors-middle-0;        
         }
+        span.error{
+            color:$colors-error;
+            font-weight: bold;
+        }
     }
     
 }
 
 .panel{
-    border: 2px solid $colors-dark-0;
+    
+    border-top: 2px solid $colors-dark-0;
+    //border-bottom: none;
     border-radius: 4px;
     background: $colors-light-0;
     .panel-header{
@@ -370,7 +374,22 @@ input{
         color: $colors-dark-2;
     }
     .panel-body{
-        
+        //border: 2px solid $colors-dark-0;
+    }
+    
+    .panel-footer{
+        background:$colors-dark-2;
+        border-bottom: 2px solid $colors-dark-2;
+        border-radius: 4px;
+        button{
+            display: block;
+            width: 100%;
+            border-radius: 0px;
+            &:hover{
+                //border:2px solid $colors-dark-2;
+                border-bottom:none;
+            }
+        }
     }
 }
 
@@ -421,6 +440,15 @@ input{
     }
     
 }
+
+.error{
+    text-align: center;
+    span{
+        font-weight: bold;
+        color:$colors-error;
+    }
+}
+
 
 
 

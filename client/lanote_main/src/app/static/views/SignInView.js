@@ -6,6 +6,7 @@ lanote.modules.static.SignInView = Components.ModalWindow.extend({
         'click #sign-cancel':'close'
     },
     signIn:function(){
+        this.$('.error>span').empty();
         var obj = this.getInputValues();
         obj.password = hex_sha1(obj.password);
         var model =new (Components.Model.extend({
@@ -20,8 +21,8 @@ lanote.modules.static.SignInView = Components.ModalWindow.extend({
                 lanote.static.getUserSession();
             }.bind(this),
             error:function(){
-                //TODO: show what user is incorrect
-            }
+                this.$('.error>span').text('Ошибка входа. Неверный логин/пароль.');
+            }.bind(this)
         });
     }
 });

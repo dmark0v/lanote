@@ -96,7 +96,7 @@ body {
   padding-top: 0px;
 }
 
-#header > div {
+#header > div > div {
   height: 60px;
   padding-top: 10px;
 }
@@ -142,6 +142,7 @@ button:hover {
 }
 button:focus {
   border: 2px solid #497D7A;
+  outline: 0;
 }
 
 .btn-wrapper {
@@ -205,9 +206,6 @@ input {
   left: 0;
   width: 100%;
 }
-.input-form span.error + input {
-  padding: 4px 12px 20px 12px;
-}
 .input-form span.error {
   background: #FF5C33;
   color: #F8F4D7;
@@ -222,7 +220,7 @@ input {
   top: 100%;
   margin-top: -16px;
 }
-.input-form input:focus {
+.input-form input:focus, .input-form span.error + input {
   padding: 4px 12px 20px 12px;
 }
 .input-form input:focus + label {
@@ -334,9 +332,13 @@ input {
   background: #D3E2B6;
   border: 2px solid #D3E2B6;
 }
+.texteditor .toolbar span.error {
+  color: #FF5C33;
+  font-weight: bold;
+}
 
 .panel {
-  border: 2px solid #AACCB1;
+  border-top: 2px solid #AACCB1;
   border-radius: 4px;
   background: #FCFAEE;
 }
@@ -348,6 +350,19 @@ input {
   box-sizing: border-box;
   font-weight: bold;
   color: #497D7A;
+}
+.panel .panel-footer {
+  background: #497D7A;
+  border-bottom: 2px solid #497D7A;
+  border-radius: 4px;
+}
+.panel .panel-footer button {
+  display: block;
+  width: 100%;
+  border-radius: 0px;
+}
+.panel .panel-footer button:hover {
+  border-bottom: none;
 }
 
 .tree > ul > li {
@@ -391,6 +406,14 @@ input {
 .tree .choosen > .node-title {
   background: #80A4A2;
   color: #D3E2B6;
+}
+
+.error {
+  text-align: center;
+}
+.error span {
+  font-weight: bold;
+  color: #FF5C33;
 }
 
 /*# sourceMappingURL=main_new.css.map */

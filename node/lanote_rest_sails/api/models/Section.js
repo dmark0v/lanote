@@ -13,6 +13,7 @@ module.exports = {
           required:true,
           unique:true
       },
+      note_id:'string',
       nodes:'array'
   }
 };

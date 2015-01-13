@@ -11,7 +11,8 @@ Components.ModalWindow = Components.Form.extend({
            tagName:'div' ,
            className:'modal-body',
            template:this.template,
-           views:this.views
+           views:this.views,
+           templateHelpers:this.templateHelpers
         });
         this.template = '#cmp-modal';
         this.views = {

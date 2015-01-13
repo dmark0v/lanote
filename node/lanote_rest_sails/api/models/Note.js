@@ -8,15 +8,14 @@
 module.exports = {
 
   attributes: {
-      title:{
-          type:'string'
-      },
-      section_id:{
-          type:'string'
-      },
       body:{
           type:'string'
+      },
+      public:{
+          type:'boolean',
+          defaultsTo:false
       }
+      
   }
 };
 

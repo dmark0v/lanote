@@ -1,3 +1,6 @@
+<div class="error">
+    <span></span>
+</div>
 <div class="input-form label-bottom">
     <input name="username" class="input-md" type="text" placeholder="Логин">
     <label>Логин</label>

@@ -17,19 +17,23 @@ module.exports = {
                 return res.serverError();
             } else
             {
-                return res.send(section.id);
+                return res.send(section);
             }
         });
         
     },
     find:function(req,res){
         Section.findOne({user_id:req.session.user.id}).exec(function(err,result){
-            console.log('123123123');
             if(err){
                 return res.serverError();
             }
-            console.log(result);
-            res.send(result);
+            if(result)
+            {
+                res.send(result);
+            } else
+            {
+                res.json(200,{nodes:[]});
+            }
         });
     }
 };

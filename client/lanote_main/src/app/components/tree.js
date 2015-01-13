@@ -31,6 +31,7 @@ Components.TreeView = Marionette.View.extend({
             $(el.target.parentNode.parentNode).find('>li>ul').removeClass('active');
             el.target.parentNode.setAttribute('class','choosen');
         }
+        this.selectedItem = el.target.parentNode.model;
         this.onSelectNode(el.target.parentNode.model);
         
     },

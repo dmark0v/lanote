@@ -1,6 +1,7 @@
 <div class="toolbar clearfix" style="display:none" >
     <div class="left">
-        <button  type="button" class="btn-save-note" title="Сохранить заметку"><i class="fa fa-floppy-o" style="font-weight: bold"></i></button>
+        <button  type="button" class="btn-save-note" title="Сохранить заметку"><i class="fa fa-floppy-o" style="font-weight: bold"></i> сохранить</button>
+        <span class="error"></span>
     </div>    
     <div class="right">
         <button type="button" data-wysihtml5-command="bold" title="Жирный текст(CTRL+B)" href="javascript:;" unselectable="on"><i class="fa fa-bold"></i></button>

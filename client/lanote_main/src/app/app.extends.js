@@ -8,23 +8,25 @@ Marionette.TemplateCache.storeTemplate = function (templateId, template) {
 }.bind(Marionette.TemplateCache);
 
 //I don't need another one div with region
-Marionette.Region.prototype.attachHtml = function (view)
+/*Marionette.Region.prototype.attachHtml = function (view)
 {
     this.el.innerHTML = '';
+    debugger;
     if (view.tagName)
     {
         this.el.appendChild(view.el);
     } else
     {
         //this shit is slower in 3-4 times
-        //$(this.el).append($(view.el.innerHTML));
+        /*$(this.el).append($(view.el.innerHTML));
         var nodes = view.el.childNodes;
         for(var i=0;i<nodes.length;i++)
         {
             this.el.appendChild(nodes[i]);
         }
+        this.el = view.el;
     }
-};
+};*/
 //i need property to check what i don't need div
 Backbone.View.prototype.tagName = void 0;
 

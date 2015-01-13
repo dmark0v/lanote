@@ -69,27 +69,27 @@ Components.Module = Marionette.Module.extend({
         }
         if(this.loadFiles)
         {
-            var defs = [];
+            this.defs = [];
             //loading files
             var scriptsDefs = this.loadScripts();
             var templateDefs = this.loadTemplates();
             //check if we loading more than 1 file
             if(_.isArray(scriptsDefs))
             {
-                defs = defs.concat(scriptsDefs);
+                this.defs = this.defs.concat(scriptsDefs);
             } else
             {
-                defs.push(scriptsDefs);
+                this.defs.push(scriptsDefs);
             }
             if(_.isArray(templateDefs))
             {
-                defs = defs.concat(templateDefs);
+                this.defs = this.defs.concat(templateDefs);
             } else
             {
-                defs.push(templateDefs);
+                this.defs.push(templateDefs);
             }
             //wait when files would be loaded
-            $.when.apply($,defs).done(function(){
+            $.when.apply($,this.defs).done(function(){
                 this.triggerMethod('start', options);
             }.bind(this));
         } else

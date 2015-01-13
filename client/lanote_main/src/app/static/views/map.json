@@ -1,1 +1,1 @@
-{ "src":["SignInView.js","SignUpView.js","SignFormView.js","UserInfoView.js","FooterView.js","HeaderView.js"]}
+{ "src":["PromptView.js","SignInView.js","SignUpView.js","SignFormView.js","UserInfoView.js","FooterView.js","HeaderView.js"]}

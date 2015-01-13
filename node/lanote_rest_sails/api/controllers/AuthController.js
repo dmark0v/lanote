@@ -44,4 +44,5 @@ module.exports = {
         delete req.session.user;
         return res.ok();
     }
+    
 }

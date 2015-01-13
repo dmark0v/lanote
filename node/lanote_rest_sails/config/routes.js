@@ -46,7 +46,27 @@ module.exports.routes = {
   'GET /logout':{
       controller:'AuthController',
       action:'logout'
-  }
+  },
+  'POST /note/public':{
+      controller:'NoteController',
+      action:'createPublic'
+   },
+  'POST /note/public/:id':{
+      controller:'NoteController',
+      action:'updatePublic'
+   },
+   'GET /note/public/:id':{
+      controller:'NoteController',
+      action:'getPublic'
+   },
+   'GET /user/checkUsername/:username':{
+      controller:'UserController',
+      action:'checkUsername'
+   },
+   'GET /user/checkEmail/:email':{
+      controller:'UserController',
+      action:'checkEmail'
+   },
 
   /***************************************************************************
   *                                                                          *

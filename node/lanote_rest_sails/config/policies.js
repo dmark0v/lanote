@@ -29,6 +29,8 @@ module.exports.policies = {
    '*': false,
    'UserController':{
        create:true,
+       checkEmail:true,
+       checkUsername:true,
        edit:'isLoggedIn',
        update:'isLoggedIn',
        destroy:false,
@@ -48,11 +50,16 @@ module.exports.policies = {
        find:true
    },
    'NoteController':{
-       create:true,
-       edit:true,
-       update:true,
-       destroy:true,
-       find:true
+       create:'isLoggedIn',
+       edit:'isLoggedIn',
+       update:'isLoggedIn',
+       destroy:false,
+       find:false,
+       findOne:'isLoggedIn',
+       createPublic:true,
+       getPublic:true,
+       updatePublic:true
+       
    }
    
 

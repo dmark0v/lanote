@@ -6,6 +6,9 @@
         <div class="panel-body">
             <%=views.sections%>
         </div>    
+        <div class="panel-footer">
+            <button id="section-add" type="button"><i class="fa fa-plus"></i> Добавить раздел</button>
+        </div>
     </div>    
     
 </div>
