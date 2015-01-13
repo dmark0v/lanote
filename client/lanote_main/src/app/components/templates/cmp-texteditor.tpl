@@ -1,4 +1,4 @@
-<div class="toolbar" style="display:none">
+<div class="toolbar clearfix" style="display:none" >
     <div class="left">
         <button  type="button" class="btn-save-note" title="Сохранить заметку"><i class="fa fa-floppy-o" style="font-weight: bold"></i></button>
     </div>    

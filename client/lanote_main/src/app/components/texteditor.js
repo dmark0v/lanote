@@ -1,5 +1,5 @@
 Components.TextEditor = Backbone.Marionette.ItemView.extend({
-    className:'texteditor',
+    className:'texteditor panel-shadow',
     template:'#cmp-texteditor',
     onRender:function(){
         

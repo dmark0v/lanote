@@ -64,8 +64,8 @@ Components.Module = Marionette.Module.extend({
             if(lanote.activeModule)
             {
                 lanote.activeModule.stop();
-                lanote.activeModule = this;
             }
+            lanote.activeModule = this;
         }
         if(this.loadFiles)
         {
@@ -99,7 +99,7 @@ Components.Module = Marionette.Module.extend({
         
     },
     onStop:function(){
-        lanote.content.close();
+        lanote.content.currentView.destroy();
     }
 });
 
