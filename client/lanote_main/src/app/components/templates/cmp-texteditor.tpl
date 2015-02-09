@@ -1,6 +1,6 @@
 <div class="toolbar clearfix" style="display:none" >
     <div class="left">
-        <button  type="button" class="btn-save-note" title="Сохранить заметку"><i class="fa fa-floppy-o" style="font-weight: bold"></i> сохранить</button>
+        <button  type="button" class="btn-save-note" title="Сохранить заметку"><img class="ic-save-light" style="font-weight: bold" src="img/save_light.png"/><img class="ic-save-dark" style="font-weight: bold" src="img/save_dark.png"/></button>
         <span class="error"></span>
     </div>    
     <div class="right">

@@ -303,7 +303,7 @@ input {
 
 .texteditor {
   width: 100%;
-  border: 2px solid #AACCB1;
+  border: 2px solid #497D7A;
   border-radius: 4px;
 }
 .texteditor .textarea {
@@ -316,10 +316,10 @@ input {
   box-sizing: border-box !important;
 }
 .texteditor .toolbar {
-  background: #AACCB1;
-  border-bottom: 2px solid #AACCB1;
-  height: 32px;
-  padding: 2px 10px;
+  background: #497D7A;
+  border-bottom: 2px solid #497D7A;
+  height: 36px;
+  padding: 0px 10px;
 }
 .texteditor .toolbar .left {
   float: left;
@@ -327,14 +327,35 @@ input {
 .texteditor .toolbar .right {
   float: right;
 }
+.texteditor .toolbar button {
+  background: #497D7A;
+  border: none;
+  padding: 4px 10px;
+  font-size: 24px;
+}
+.texteditor .toolbar button img.ic-save-light {
+  display: block;
+}
+.texteditor .toolbar button img.ic-save-dark {
+  display: none;
+}
 .texteditor .toolbar .wysihtml5-command-active, .texteditor .toolbar button:hover {
+  border: none;
+  border-radius: 0px;
   color: #497D7A;
   background: #D3E2B6;
-  border: 2px solid #D3E2B6;
+}
+.texteditor .toolbar .wysihtml5-command-active img.ic-save-light, .texteditor .toolbar button:hover img.ic-save-light {
+  display: none;
+}
+.texteditor .toolbar .wysihtml5-command-active img.ic-save-dark, .texteditor .toolbar button:hover img.ic-save-dark {
+  display: block;
 }
 .texteditor .toolbar span.error {
   color: #FF5C33;
   font-weight: bold;
+  position: relative;
+  top: -8px;
 }
 
 .panel {

@@ -318,7 +318,7 @@ input{
 }
 .texteditor{
     width:100%;
-    border: 2px solid $colors-dark-0;
+    border: 2px solid $colors-dark-2;
     border-radius: 4px;
     .textarea{
         width:100%;
@@ -330,10 +330,10 @@ input{
         box-sizing:border-box !important;
     }
     .toolbar{
-        background:$colors-dark-0;
+        background:$colors-dark-2;
         //background: -webkit-linear-gradient(top, #CCE0D0 0%, $colors-dark-0 100%);
-        border-bottom: 2px solid $colors-dark-0;
-        height:32px;
+        border-bottom: 2px solid $colors-dark-2;
+        height:36px;
         .left{
             float:left;
 
@@ -341,18 +341,36 @@ input{
         .right{
             float:right;
         }
-        padding:2px 10px;
+        padding:0px 10px;
         button{
-            
-        }
+            background: $colors-dark-2;
+            border:none;
+            padding: 4px 10px;
+            font-size: 24px;
+            img.ic-save-light{
+                display: block;
+            }
+            img.ic-save-dark{
+                display:none;
+            }
+        }   
         .wysihtml5-command-active,button:hover{
+            border:none;
+            border-radius: 0px;
             color: $colors-dark-2;
             background: $colors-middle-0;
-            border: 2px solid $colors-middle-0;        
+            img.ic-save-light{
+                display: none;
+            }
+            img.ic-save-dark{
+                display:block;
+            }
         }
         span.error{
             color:$colors-error;
             font-weight: bold;
+            position: relative;
+            top: -8px;        
         }
     }
     
